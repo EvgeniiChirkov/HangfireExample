@@ -22,7 +22,7 @@ namespace Hangfire.Example.Tasks
         public JobRunningResult TaskExecute<T>(JobType jobType, T parameter)
         {
             var task = TaskInformant.Jobs[jobType];
-            // TODO if (task.IsSingle && _hangfireJobMemory.Contains(jobType))
+            // TODO if (task.IsSingle && _hangfireJobMemory.IsRunning(jobType))
             //  TODO   throw new JobInProgressException(jobType);
 
             //Task.Run(async () => await task.Start(parameter))
