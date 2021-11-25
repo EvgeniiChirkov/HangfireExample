@@ -19,7 +19,7 @@ namespace Hangfire.Example.Tasks
 
             public void OnPerforming(PerformingContext filterContext)
             {
-                var d = filterContext.BackgroundJob.Job.Method.DeclaringType;
+                var type = filterContext.BackgroundJob.Job.Method.DeclaringType;
                 var jobId = filterContext.BackgroundJob.Id;
                 // TODO _hangfireJobMemory.Add(jobId, ...);
             }

@@ -21,7 +21,7 @@ namespace Hangfire.Example.Services
         }
         public async Task DateTimeToConsole(DateTime dateTime)
         {
-            Console.WriteLine($"Start - {DateTime.Now}");
+            Console.WriteLine($"Start - {dateTime}");
             Thread.Sleep(10);
             throw new Exception();
             Console.WriteLine($"{_serviceSettings.SampleSettings} - END - {DateTime.Now}");
